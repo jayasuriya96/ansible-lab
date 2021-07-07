@@ -1,0 +1,29 @@
+##################################################
+# DO Community Playbooks: Apache on Ubuntu 18.04
+##################################################
+---
+- hosts: localhost
+  become: true
+  # vars_files:
+  #   - vars/default.yml
+  roles:
+    - Install_apache
+  tasks:
+    
+
+    # - name: Create document root
+    #   file:
+    #     path: "/var/www/{{ http_host }}"
+    #     state: directory
+    #     owner: "{{ app_user }}"
+    #     mode: '0755'
+
+    # - name: Copy index test page
+    #   template:
+    #     src: "files/index.html.j2"
+    #     dest: "/var/www/{{ http_host }}/index.html"
+
+    # - name: Set up Apache virtualhost
+    #   template:
+    #     src: "files/apache.conf.j2"
+    #     dest: "/etc/apache2/sites-available/{{ http_conf }}"
