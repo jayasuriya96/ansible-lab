@@ -6,7 +6,7 @@
 
 - name: Install package
   yum:
-    name: /opt/mysql/mysql-community-release-el7-5.noarch.rpm
+    name: '{{ sql_url }}'
     state: present
 
 # - name: "Installing Repo"
