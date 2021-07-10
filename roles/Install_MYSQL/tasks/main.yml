@@ -17,10 +17,10 @@
 #   package: name=mysql-community-server state=present
 
 
-# - name: Install MySQL
-#   yum: 
-#     name: mysql-server state=installed
-#     state: present
+- name: Install MySQL
+  yum: 
+    name: mysql-server state=installed
+    state: present
 
 
     
