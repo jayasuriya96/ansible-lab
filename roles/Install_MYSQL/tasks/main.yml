@@ -1,17 +1,17 @@
 ---
-# - name: Download sources
-#   get_url:
-#     url: '{{ sql_url }}'
-#     dest: /opt/mysql
+- name: Download sources
+  get_url:
+    url: '{{ sql_url }}'
+    dest: /opt/mysql
 
 - name: Install package
   yum:
     name: /opt/mysql/mysql-community-release-el7-5.noarch.rpm
     state: present
 
-- name: "Installing Repo"
-  shell: sudo rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
-  ignore_errors: yes
+# - name: "Installing Repo"
+#   shell: sudo rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
+#   ignore_errors: yes
 
 # - name: "Installing MySQL 5.7"
 #   package: name=mysql-community-server state=present
