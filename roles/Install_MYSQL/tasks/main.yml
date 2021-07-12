@@ -19,7 +19,7 @@
 
 - name: Install MySQL
   yum: 
-    name: mysql-server state=installed
+    name: mysql-server 
     state: present
 
 
