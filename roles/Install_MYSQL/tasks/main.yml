@@ -9,14 +9,6 @@
     name: '{{ sql_url }}'
     state: present
 
-# - name: "Installing Repo"
-#   shell: sudo rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
-#   ignore_errors: yes
-
-# - name: "Installing MySQL 5.7"
-#   package: name=mysql-community-server state=present
-
-
 - name: Install MySQL
   yum: 
     name: mysql-server 
